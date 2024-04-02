@@ -1,0 +1,4 @@
+{
+    "sample_message": "hi",
+    "formatted_message": "hi %s"
+}
