@@ -32,17 +32,17 @@ func secureRandomBytes(length int) []byte {
 	return randomBytes
 }
 
-func generateHashToken(salt string) string {
+func GenerateHashToken(salt string) string {
 	rs := ""
 	rb := secureRandomBytes(4)
 	if rb != nil {
 		rs = string(rb)
 	}
 
-	return hash(salt + generateUUID() + rs)
+	return hash(salt + GenerateUUID() + rs)
 }
 
-func generateUUID() string {
+func GenerateUUID() string {
 	id := uuid.New()
 	return id.String()
 }
